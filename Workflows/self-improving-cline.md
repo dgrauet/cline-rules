@@ -1,9 +1,12 @@
 ---
+name: "Self-Improving Cline Reflection"
 description: "A global workflow to reflect on a task and propose improvements to active .clinerules based on user feedback and multi‑step work."
 author: "Cline Team"
 version: "1.0"
 tags: ["reflection", "rules", "workflow", "process-improvement"]
 globs: ["*.*"]
+effective_date: "2025-01-11"
+review_date: "2025-07-11"
 ---
 This is a manual workflow. Invoke with `/self-improving-cline.md`. The goal is to propose focused, high‑value improvements to your active .clinerules (global and/or workspace). No diff scaffolding here — handle mechanics as needed.
 
@@ -20,7 +23,7 @@ Ask whether reflection is warranted for this task:
 <options>["Yes — proceed", "No — end workflow"]</options>
 </ask_followup_question>
 ```
-If “No — end workflow”, conclude briefly and stop.
+If "No — end workflow", conclude briefly and stop.
 
 ## 2) Offer Reflection
 
@@ -31,12 +34,12 @@ Confirm the user wants reflection and proposals:
 <options>["Yes — reflect", "No — end workflow"]</options>
 </ask_followup_question>
 ```
-If “No — end workflow”, conclude and stop.
+If "No — end workflow", conclude and stop.
 
 ## 3) Identify Active Rules (Best‑Effort)
 
 - Workspace rules: `.clinerules/` (if present in the current project)
-- Global rules: user’s global Rules directory (if accessible from this environment)
+- Global rules: user's global Rules directory (if accessible from this environment)
 
 Attempt to list workspace rules:
 ```xml
@@ -52,7 +55,7 @@ Optionally list a known global rules path if visible:
 </list_files>
 ```
 
-If some paths aren’t visible from this environment, ask the user to provide the files to consider (or confirm to skip).
+If some paths aren't visible from this environment, ask the user to provide the files to consider (or confirm to skip).
 
 ## 4) Load Accessible Rule Files
 
@@ -65,7 +68,7 @@ For each accessible rule file you want to consider:
 
 ## 5) Review and Synthesize Opportunities
 
-Using the current task’s conversation context:
+Using the current task's conversation context:
 - Summarize relevant user feedback (explicit and implicit)
 - Identify where rules helped or hindered flow
 - Propose targeted improvements focused on:
@@ -90,9 +93,9 @@ Ask how to proceed:
 
 ## 8) Execute or Report
 
-- If “Apply now”: implement updates for accessible files
-- If “Show recommendations only”: present a clean summary for manual application
-- If “Cancel”: make no changes
+- If "Apply now": implement updates for accessible files
+- If "Show recommendations only": present a clean summary for manual application
+- If "Cancel": make no changes
 
 ## 9) Conclude
 
@@ -105,3 +108,40 @@ Summarize what changed or what to change next, then finish.
 - Keep proposals short, specific, and actionable.
 - No diff/replace scaffolding in the output; handle mechanics as needed.
 </notes>
+
+## Cross-References
+
+### Depends On
+- **[Task Handoff Strategy](new-task-automation.md)** - Must understand task context for effective reflection
+- **[Documentation Standards](documentation-standards.md)** - Must follow documentation standards when proposing rule improvements
+- **[Cline Rules Templates](rule-templates.md)** - Must understand rule structure to propose proper improvements
+
+### Extends
+- **Self-Improvement Framework**: Provides specific implementation for continuous rule improvement
+- **Quality Enhancement Patterns**: Builds on governance and quality standards for rule evolution
+
+### See Also
+- **[Create New Workflow](create-new-workflow.md)** - May be used to create new workflows based on improvement findings
+- **[Git Development Workflow](git-development.md)** - May need to create workflows for improvement-related git processes
+- **[Baby Steps™ Methodology](baby-steps.md)** - Rule improvements must follow incremental progress principles
+
+### Replaces
+- **Ad-hoc Rule Improvements**: Systematizes and standardizes the rule improvement process
+- **Informal Reflection Practices**: Implements governed approach to continuous rule enhancement
+
+### Conflicts With
+- **None**: This workflow complements all other workflows and follows established governance patterns
+
+## Implementation Requirements
+- **MUST** assess task complexity before initiating reflection workflow
+- **SHOULD** analyze user feedback for actionable improvement opportunities
+- **MUST** follow established documentation standards for improvement proposals
+- **SHOULD** maintain focus on high-value, targeted rule enhancements
+- **MUST** implement changes only with explicit user approval
+
+## Actionable Guidelines
+- **You MUST** verify task complexity before proceeding with reflection
+- **You SHOULD** maintain comprehensive documentation of all proposed changes
+- **You MUST** adhere to documentation standards for all rule improvement proposals
+- **You SHOULD** prioritize improvements that address direct user feedback
+- **You MUST NOT** make changes without explicit user consent

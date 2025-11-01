@@ -1,3 +1,14 @@
+---
+name: "Git Development Workflow"
+description: "Best practices for git development, branching strategies, commit conventions, and pull request management in the Hyperpage project"
+author: "Cline Team"
+version: "1.0"
+tags: ["git", "development", "workflow", "version-control", "github"]
+globs: ["*.md", "*.ts", "*.js"]
+effective_date: "2025-01-11"
+review_date: "2025-07-11"
+---
+
 # Git Development Workflow
 
 This workflow outlines best practices for git development, branching strategies, commit conventions, and pull request management in the Hyperpage project.
@@ -374,144 +385,35 @@ type(scope): description
 ### General Guidelines
 - **Small, Focused Commits**: Each commit should do one thing well
 - **Frequent Commits**: Commit early and often to avoid large PRs
-- **Descriptive Messages**: Write commit messages explaining what and why
-- **Atomic Changes**: Changes should be reviewable in isolation
-- **Branch Hygiene**: Keep branches short-lived and focused
+- **
 
-### Pull Request Best Practices
-- **Descriptive Title**: Clear, concise description of changes
-- **Detailed Description**: Explain what, why, and how
-- **Small Scope**: Keep PRs under 500 lines when possible
-- **Link Issues**: Reference related tickets/issues
-- **Add Screenshots**: For UI changes, include before/after images
-- **Request Review**: Proactively request specific reviewers
-- **Respond Promptly**: Address review feedback quickly
+## Cross-References
 
-### Code Review Standards
-- **Be Constructive**: Focus on code quality, not personal preferences
-- **Explain Reasoning**: Provide context for suggested changes
-- **Acknowledge Good Code**: Recognize well-written implementations
-- **Balance Perfection vs Progress**: Accept reasonable solutions
-- **Test Changes**: Reviewers should test functionality locally
+### Depends On
+- **[Baby Steps™ Methodology](../Rules/baby-steps.md)** - Must follow incremental development principles throughout git workflow
+- **[Task Handoff Strategy](../Rules/new-task-automation.md)** - Must ensure proper handoff between development phases
+- **[Documentation Standards](../Rules/documentation-standards.md)** - Must follow documentation conventions for commits and PR descriptions
 
-## CLI Safety Considerations
+### Extends
+- **Version Control Framework**: Provides specific implementation for git-based development workflows
+- **Code Review Standards**: Implements code review best practices and standards
 
-When using GitHub CLI commands (especially with MCP tools like `create_pull_request`), special attention must be paid to PR body content to prevent shell command errors caused by special characters, quotes, and excessive length.
+### See Also
+- **[Create New Workflow](create-new-workflow.md)** - May be used to create workflows for git-related processes
+- **[Self-Improving Cline Reflection](self-improving-cline.md)** - May be used to reflect on git workflow effectiveness
+- **[Documentation Accuracy Standards](../Rules/documentation-accuracy.md)** - Must avoid hype in commit messages and PR descriptions
 
-### PR Body Content Sanitization
+### Replaces
+- **Ad-hoc Git Practices**: Standardizes git workflow across all Cline projects
+- **Informal Branching Strategies**: Implements consistent, governed branching approach
+- **Manual PR Management**: Automates and standardizes pull request creation and management
 
-#### Special Character Handling
-- **Escape shell metacharacters**: Use backslashes to escape `$`, `` ` ``, `"`, `'`, `\`, and shell control characters
-- **Avoid multi-line complexity**: Replace actual newlines with `\n` sequences or use file-based approach
-- **Handle quotes carefully**: Single quotes are safer for content with double quotes; escape embedded quotes appropriately
-- **URL encoding**: For URLs with special characters, consider URL encoding or storing in files
+### Conflicts With
+- **None**: This workflow complements other development practices and follows established governance patterns
 
-#### Common Problem Characters
-Problematic characters that can break CLI commands:
-- `$` (variable substitution)
-- `` ` `` (command substitution)
-- `"` (quote handling)
-- `'` (quote handling)
-- `\` (escape sequences)
-- `;` and `|` (command separators)
-- Parentheses `( )` and curly braces `{ }` in certain contexts
-
-#### Safe Escaping Examples
-```bash
-# Instead of problematic content:
-gh pr create --body "Fix $500 bug in authentication ($auth)" --title "Security fix"
-
-# Use escaped version:
-gh pr create --body "Fix \$500 bug in authentication (\$auth)" --title "Security fix"
-
-# Or for complex content:
-gh pr create --title "Security fix" --body-file pr-body.md
-```
-
-### Length Limits and Performance
-
-#### Command Line Length Restrictions
-- **Windows**: 8191 characters (approximately 8KB)
-- **Linux/macOS**: 128KB to 2MB depending on shell
-- **GitHub CLI limitations**: Practical limit around 64KB for PR bodies
-
-#### Best Practices for Long Content
-- Use `--body-file` flag for PR bodies over 1000 characters
-- Create temporary markdown files for complex formatted content
-- Consider referencing external documentation for very detailed PRs
-
-#### File-Based PR Creation Example
-For complex PR bodies, create a file and reference it:
-
-```bash
-# Create PR body file
-cat > pr-body.md << 'EOF'
-## Security Fix Summary
-
-This PR addresses authentication vulnerabilities including:
-
-### Changes
-- Fixed password validation bypass ($500 security issue)
-- Added rate limiting for login attempts
-- Implemented stronger password requirements
-
-### Testing
-- All existing tests pass
-- Added security test suite
-- Penetration testing completed
-
-### References
-- Security audit report: [internal-link]
-- Ticket: ISSUE-123
-
-> **Note**: Special characters like `$500` are handled safely in file format.
-EOF
-
-# Create PR using file
-gh pr create --title "Security: Fix authentication bypass" --body-file pr-body.md
-
-# Clean up
-rm pr-body.md
-```
-
-### MCP Tool Safety Guidelines
-
-When using MCP tools like `create_pull_request` that interface with CLI commands:
-
-#### Content Preprocessing Requirements
-- **Sanitize input data**: Remove or escape shell metacharacters before passing to CLI
-- **Validate content length**: Check total command length stays within shell limits
-- **Use file-based approach**: For complex content with formatting, code blocks, or special characters
-- **Error handling**: Implement fallback to file-based creation if inline content fails
-
-#### Safe Implementation Pattern
-```typescript
-// Example MCP tool usage pattern
-const createSafePR = (title: string, body: string) => {
-  const sanitizedBody = sanitizeForCLI(body);
-
-  if (sanitizedBody.length > MAX_INLINE_LENGTH || needsFileBased(sanitizedBody)) {
-    // Use file-based approach
-    return createPullRequest({
-      title,
-      bodyFile: writeTempBodyFile(sanitizedBody)
-    });
-  } else {
-    // Use inline approach
-    return createPullRequest({
-      title,
-      body: sanitizedBody
-    });
-  }
-};
-```
-
-#### Prevention Checklist
-- [ ] Review PR body for special shell characters before CLI execution
-- [ ] Test commands with sample data containing potential problem characters
-- [ ] Implement length validation (under 1000 chars preferred for inline)
-- [ ] Use `--body-file` for content with code blocks, links, or complex formatting
-- [ ] Escape dollar signs, backticks, and quotes in inline content
-- [ ] Avoid embedding shell commands or variables in PR descriptions
-
-This workflow ensures consistent, high-quality development practices across the Hyperpage project.
+## Implementation Requirements
+- **MUST** follow git workflow steps in sequence for all development work
+- **SHOULD** use feature branches for all development work
+- **MUST** write descriptive commit messages using conventional commits format
+- **SHOULD** request code review for all non-trivial changes
+- **MUST** follow security best practices when using GitHub CLI commands

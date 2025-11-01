@@ -31,90 +31,99 @@ This master index provides navigation and relationship mapping for all Cline glo
 ## Rule Hierarchy Structure
 
 ### Level 1: Meta-Governance Rules (Highest Priority)
-- **Purpose**: Rules about rules themselves
-- **Scope**: Cross-cutting concerns affecting all other rules
-- **Examples**: Governance, versioning, conflict resolution, validation
+- **You MUST** understand governance rules before implementing any Cline rules
+- **You MUST** apply cross-cutting governance to all rule operations  
+- **You SHOULD** use META_GOVERNANCE.md for all governance decisions
 
 ### Level 2: Core Methodology Rules (High Priority)
-- **Purpose**: Universal operational principles and methodologies
-- **Scope**: Fundamental behavioral patterns and tool usage
-- **Examples**: Baby Steps methodology, task handoff strategies
+- **You MUST** follow Baby Steps™ methodology for all Cline operations
+- **You MUST** use task handoff strategy for context management
+- **You SHOULD** apply behavioral patterns consistently across all projects
 
 ### Level 3: Universal Standards (High Priority)
-- **Purpose**: Cross-project standards and best practices
-- **Scope**: Documentation, coding, and rule creation standards
-- **Examples**: Documentation guidelines, anti-hype standards, coding standards, templates
+- **You MUST** follow documentation standards for all Cline documentation
+- **You MUST** avoid marketing hype and maintain accuracy
+- **You MUST** use coding standards for all implementation work
 
 ### Implementation Dependencies
-```
-META_GOVERNANCE.md (meta-rules foundation)
-├── baby-steps.md (core methodology)
-├── new-task-automation.md (extends methodology)
-├── documentation-standards.md (universal documentation practices)
-├── documentation-accuracy.md (universal accuracy standards)
-├── coding-standards.md (universal coding practices)
-└── rule-templates.md (standardized rule creation)
-```
+- **You MUST** use META_GOVERNANCE.md as the foundation for all rule governance
+- **You SHOULD** follow dependency chain when implementing rules
+- **You MUST NOT** skip prerequisite rules in the dependency hierarchy
 
 ## Search Tags
 
-- **#meta-governance** - Rules about rules and governance frameworks
-- **#methodology** - Core behavioral rules and operational principles
-- **#standards** - Universal coding, documentation, and quality standards
-- **#accuracy** - Anti-hype and factual accuracy standards
-- **#templates** - Rule creation templates and validation patterns
-- **#workflow** - Process automation and task completion
-- **#navigation** - Discovery and navigation systems
+- **#meta-governance** - You MUST use for governance decisions and rule precedence
+- **#methodology** - You MUST follow for all operational procedures and task execution
+- **#standards** - You MUST apply for coding, documentation, and quality standards
+- **#accuracy** - You MUST maintain for all technical communications and rule accuracy
+- **#templates** - You MUST use when creating new rules and documentation
+- **#workflow** - You MUST follow for process automation and task completion
 
 ## Rule Relationships
 
 ### Core Dependencies
-```
-META_GOVERNANCE.md (meta-governance foundation)
-├── baby-steps.md (foundational methodology)
-├── new-task-automation.md (extends methodology)
-├── documentation-standards.md (universal documentation practices)
-├── documentation-accuracy.md (universal accuracy standards)
-├── coding-standards.md (universal coding practices)
-└── rule-templates.md (rule creation standards)
-```
+- **You MUST NOT** implement rules without understanding their dependencies
+- **You SHOULD** maintain cross-reference relationships between all rules
+- **You MUST** validate rule relationships when making changes
 
 ### Documentation Ecosystem
-```
-META_GOVERNANCE.md (highest precedence)
-├── documentation-standards.md
-│   ├── documentation-accuracy.md (anti-hype standards)
-│   └── coding-standards.md (code documentation)
-└── rule-templates.md (rule templates)
-```
+- **You MUST** maintain consistent documentation standards across all rules
+- **You SHOULD** update cross-references when modifying rule relationships
+- **You MUST NOT** create rules that contradict established governance patterns
 
 ## Quality Metrics
 
-- **Total Rules**: 7 global rules
-- **Coverage**: Meta-governance, core methodology, universal standards, templates
-- **Cross-References**: Fully interconnected standards ecosystem
-- **Governance**: Complete with versioning and review dates
+- **You MUST** maintain at least 7 global rules for complete coverage
+- **You SHOULD** achieve 100% cross-reference connectivity
+- **You MUST** keep all rules current with version and review dates
 
 ## Rule Validation Status
 
 ### ✅ Completed
-- [x] Meta-governance framework established as global rule
-- [x] Baby Steps methodology enhanced with frontmatter and cross-references
-- [x] Task handoff strategy updated with governance framework
-- [x] Cross-reference system implemented
-- [x] Universal documentation standards created
-- [x] Universal documentation accuracy standards created (anti-hype)
-- [x] Universal coding standards created
-- [x] Universal rule templates consolidated
-- [x] Global rule index updated with expanded navigation
+- [x] You MUST use the meta-governance framework for all rule decisions
+- [x] You MUST apply Baby Steps methodology to all operations
+- [x] You MUST implement task handoff strategy for context management
+- [x] You SHOULD maintain cross-reference system connectivity
+- [x] You MUST follow documentation standards for all rule content
 
 ### 📋 Next Phase
-- [ ] Update workspace governance framework
-- [ ] Migrate workspace rules with universal content
-- [ ] Update validation scripts for new structure
-- [ ] Test both validation and health monitoring
+- [ ] You SHOULD update workspace governance framework monthly
+- [ ] You MUST migrate deprecated rules within 30 days
+- [ ] You MUST validate rule relationships quarterly
+- [ ] You SHOULD test both validation and health monitoring weekly
 
 ---
 
-**Last Updated**: 2025-01-11  
-**Managed By**: Global Cline Rules Framework
+**You MUST** follow all governance rules and update this index when rules change.
+
+## Cross-References
+
+### Depends On
+- **[META_GOVERNANCE.md](META_GOVERNANCE.md)** - You MUST follow governance framework for rule organization and maintenance
+- **[Cline Rules Templates](rule-templates.md)** - You MUST follow standardized templates for rule creation and structure
+
+### Extends
+- **Navigation Framework**: You MUST use for discovery and navigation of all global Cline rules
+- **Rule Relationship System**: You SHOULD maintain dependencies and relationships between rules in the ecosystem
+
+### See Also
+- **[Baby Steps™ Methodology](baby-steps.md)** - You MUST apply core operational principles for all rule usage
+- **[Documentation Standards](documentation-standards.md)** - You MUST follow universal documentation practices for rule content
+- **[Documentation Accuracy Standards](documentation-accuracy.md)** - You MUST maintain anti-hype standards for rule communications
+- **[Coding Standards](coding-standards.md)** - You MUST follow universal coding guidelines for rule implementation
+- **[Task Handoff Strategy](new-task-automation.md)** - You MUST use context management for rule usage and transitions
+
+### Replaces
+- **Ad-hoc Rule Discovery**: You MUST use systematic approach to rule discovery and navigation
+- **Manual Rule Relationship Mapping**: You SHOULD automate and maintain rule dependencies and cross-references
+
+### Conflicts With
+- **None**: This index file complements all other rules and provides essential navigation and relationship mapping
+- **Resolution**: You MUST keep navigation current when rules are added, modified, or deprecated
+
+## Implementation Requirements
+- **You MUST** maintain current rule relationships and dependencies
+- **You SHOULD** update navigation structure when new rules are added
+- **You MUST** validate cross-references for accuracy before publishing
+- **You SHOULD** document significant changes to rule ecosystem
+- **You MUST NOT** publish rules without proper cross-reference validation

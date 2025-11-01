@@ -1,3 +1,15 @@
+---
+name: "Cline Rules Meta-Governance Framework"
+description: "Rules about rules themselves - establishes governance structure, precedence rules, and management processes for all Cline rules across global and workspace contexts"
+author: "Cline Team"
+version: "2.0"
+tags: ["meta-governance", "governance", "precedence", "validation", "rule-management"]
+globs: ["*.md"]
+related_rules: ["RULE_INDEX.md", "baby-steps.md", "rule-templates.md"]
+effective_date: "2025-01-11"
+review_date: "2025-07-11"
+---
+
 # Cline Rules Meta-Governance Framework
 
 This document establishes the governance structure, precedence rules, and management processes for all Cline rules across global and workspace contexts.
@@ -225,3 +237,35 @@ Before publishing any rule:
 - Predictive rule management
 
 This meta-governance framework ensures that Cline rules remain consistent, discoverable, and maintainable while allowing for evolution and improvement over time.
+
+## Cross-References
+
+### Depends On
+- **[Baby Steps™ Methodology](baby-steps.md)** - Core operational principles that all governance rules must follow
+- **[Cline Rules Templates](rule-templates.md)** - Standardized templates that governance rules must implement
+- **[Documentation Standards](documentation-standards.md)** - Universal documentation practices that governance rules must follow
+
+### Extends
+- **Universal Standards Framework**: Applies governance principles to all Cline rule systems across projects
+- **Quality Assurance Framework**: Implements validation criteria and health monitoring for rule systems
+
+### See Also
+- **[RULE_INDEX.md](RULE_INDEX.md)** - Navigation index for all global rules in the governance system
+- **[Task Handoff Strategy](new-task-automation.md)** - Workflow automation rules that must comply with governance standards
+- **[Documentation Accuracy Standards](documentation-accuracy.md)** - Anti-hype standards that governance communications must follow
+
+### Replaces
+- **Version 1.0 Meta-Governance**: Consolidated all governance rules into comprehensive 2.0 framework
+- **Pre-Governance Rules**: Replaced informal rule management with structured governance approach
+- **Migration Guide**: [Guidelines for migrating to v2.0 governance framework](governance-migration-guide.md)
+
+### Conflicts With
+- **None**: This is the highest-priority rule and takes precedence over all other governance rules
+- **Resolution**: When conflicts arise with lower-level rules, this meta-governance framework takes precedence
+
+## Validation Checklist
+- [ ] **YAML Frontmatter**: Complete and properly formatted
+- [ ] **Cross-Reference Sections**: All relationship types included
+- [ ] **Hierarchy Definition**: Rule precedence levels clearly defined
+- [ ] **Quality Standards**: Validation criteria established
+- [ ] **Version Control**: Semantic versioning implemented

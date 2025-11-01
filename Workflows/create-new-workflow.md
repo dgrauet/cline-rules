@@ -1,3 +1,14 @@
+---
+name: "Create New Workflow"
+description: "Guide the user through the process of creating a new standardized Cline workflow file according to the established conventions"
+author: "Cline Team"
+version: "1.0"
+tags: ["workflow", "creation", "standardization", "conventions"]
+globs: ["workflows/**/*.md"]
+effective_date: "2025-01-11"
+review_date: "2025-07-11"
+---
+
 <task name="Create New Workflow">
 
 <task_objective>
@@ -53,8 +64,31 @@ Guide the user through the process of creating a new standardized Cline workflow
 
 4. Use the `write_to_file` command to write the completed workflow file.
 
-5. Use the `attempt_completion` command to present the USER with the completed workflow file and confirmation of its creation.
+5. Use the `ask_followup_question` command to present the USER with the completed workflow file and confirmation of its creation.
 
 </detailed_sequence_steps>
 
 </task>
+
+## Cross-References
+
+### Depends On
+- **[Task Handoff Strategy](new-task-automation.md)** - Must understand context management before creating workflows
+- **[Documentation Standards](documentation-standards.md)** - Must follow documentation conventions when creating workflow files
+- **[Cline Rules Templates](rule-templates.md)** - Must understand rule structure for proper workflow implementation
+
+### Extends
+- **Workflow Automation Framework**: Provides specific implementation for automated workflow creation
+- **User Interaction Patterns**: Builds on standard user questioning patterns for workflow design
+
+### See Also
+- **[Git Development Workflow](git-development.md)** - May need to create workflows for git-related processes
+- **[Self-Improving Cline Reflection](self-improving-cline.md)** - May be used to improve workflow definitions after creation
+- **[Baby Steps™ Methodology](baby-steps.md)** - Workflow creation must follow incremental progress principles
+
+### Replaces
+- **Manual Workflow Creation**: Automates and standardizes the workflow creation process
+- **Informal Workflow Patterns**: Provides consistent, governed approach to workflow development
+
+### Conflicts With
+- **None**: This workflow complements other workflow creation processes and follows established governance patterns

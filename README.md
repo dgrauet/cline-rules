@@ -20,8 +20,7 @@ This repository contains a comprehensive governance framework for Cline rules, p
 - **self-improving-cline.md** - Self-improvement workflow documentation
 
 ### Validation Tools
-- **rule-health-monitor.js** - Automated rule validation and health monitoring
-- **validate-rules.js** - Rule validation against governance standards
+- **governance-tools.js** - Consolidated governance validation and health monitoring (comprehensive tool)
 
 ## Core Features
 
@@ -40,32 +39,20 @@ This repository contains a comprehensive governance framework for Cline rules, p
 
 ## Validation
 
-Run the validation tools to ensure rules meet governance standards:
+Run the governance tools to ensure rules meet governance standards:
 
-### Governance Compliance Validation
+### Comprehensive Governance Analysis
 ```bash
-node validate-rules.js
+node governance-tools.js
 ```
-**Purpose**: Validates all rule and workflow files against governance standards  
-**Output**: Console report + `reports/governance-validation-report.md`
-
-### Rule Health Monitoring
-```bash
-node rule-health-monitor.js
-```
-**Purpose**: Monitors governance framework compliance and provides health metrics  
-**Output**: Console report + `reports/rule-health-metrics.json` + `reports/rule-health-report.md`
-
-### Combined Validation
-```bash
-# Run both validation and health monitoring
-node validate-rules.js && node rule-health-monitor.js
-```
+**Purpose**: Complete governance validation and health monitoring in a single comprehensive analysis  
+**Output**: Console report + multiple detailed reports in `reports/` directory
 
 ### Reports Generated
+- **reports/comprehensive-governance-report.md** - Complete executive summary with validation and health analysis
 - **reports/governance-validation-report.md** - Detailed validation findings
-- **reports/rule-health-metrics.json** - JSON metrics data
-- **reports/rule-health-report.md** - Human-readable health report
+- **reports/rule-health-metrics.json** - JSON metrics data for programmatic access
+- **reports/rule-health-report.md** - Human-readable health analysis
 - **reports/** - All reports are stored in this gitignored directory
 
 ## Contributing
